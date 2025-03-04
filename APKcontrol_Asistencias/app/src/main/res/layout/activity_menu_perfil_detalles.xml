@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDFDFD"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FDFDFD">
+
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="436dp"
+                    android:layout_height="345dp"
+                    android:layout_marginTop="-150dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.52"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/imagen1" />
+
+                <ImageView
+                    android:id="@+id/Frm_Perfil_ImgCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="310dp"
+                    android:layout_marginTop="60dp"
+                    android:onClick="OnClick_CamaraPerfil"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5"
+                    app:srcCompat="@drawable/camara" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/Frm_Perfil_ImgFoto"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/perfil"
+                    app:civ_border_color="#EDEDED"
+                    app:civ_border_width="6dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+                <TextView
+                    android:id="@+id/textNombreCompleto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Nombre del Empleado"
+                    android:textColor="@color/black"
+                    android:textSize="23dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/Frm_Perfil_ImgFoto"
+                    app:layout_constraintStart_toStartOf="@+id/Frm_Perfil_ImgFoto"
+                    app:layout_constraintTop_toBottomOf="@+id/Frm_Perfil_ImgFoto" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3">
+
+                <TextView
+                    android:id="@+id/textEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/email"
+                    android:drawablePadding="20dp"
+                    android:padding="25dp"
+                    android:gravity="center_vertical"
+                    android:text="Prueba@gmail.com"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                <TextView
+                    android:id="@+id/textrelleno"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#A6A6A6" />
+                <TextView
+                    android:id="@+id/textTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/telefono"
+                    android:drawablePadding="20dp"
+                    android:padding="25dp"
+                    android:gravity="center_vertical"
+                    android:text="955 955 955"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <TextView
+                    android:id="@+id/textrelleno2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#A6A6A6" />
+                <TextView
+                    android:id="@+id/textCargo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/cargo"
+                    android:drawablePadding="20dp"
+                    android:padding="25dp"
+                    android:gravity="center_vertical"
+                    android:text="Desarrollador de Backend"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+                <TextView
+                    android:id="@+id/textrelleno3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#A6A6A6" />
+                <TextView
+                    android:id="@+id/textArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/area"
+                    android:drawablePadding="20dp"
+                    android:padding="25dp"
+                    android:gravity="center_vertical"
+                    android:text="Desarrollo backend Ecommerce"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            </LinearLayout>
+            >
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

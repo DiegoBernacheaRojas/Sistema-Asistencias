@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.apkcontrol_asistencias"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="34" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <permission
+        android:name="com.example.apkcontrol_asistencias.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.apkcontrol_asistencias.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/geor2"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/geor2"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.APKcontrol_Asistencias"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".View.Menu.MarcAsistencia.MnScanerFacial"
+            android:exported="false"/>
+        <activity
+            android:name=".View.Menu.ActuDatos.MnActScanerFacial"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.HistJustificacion.MnHistorial"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.HistJustificacion.MnHistorialDetalle"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.HoraSemanal.MnHorarioSemanal"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.ActuDatos.MnActConfirmacion"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.ActuDatos.MnActFacial"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.MarcAsistencia.MnFacial"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.MarcAsistencia.MnJustificar"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.MarcAsistencia.MnDarEvidencia"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.MarcAsistencia.MnOpcionJust"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.MarcAsistencia.MnScan"
+            android:exported="false"/>
+        <activity
+            android:name=".View.Menu.Justificar.MnJusticarAusencia"
+            android:exported="false" />
+        <activity
+            android:name=".View.Menu.Perfil.MnPerfil"
+            android:exported="false" />
+        <activity
+            android:name=".View.MnMenu"
+            android:exported="false" />
+        <activity
+            android:name=".View.MnLogin"
+            android:exported="false" />
+        <activity
+            android:name=".View.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.apkcontrol_asistencias.com.squareup.picasso"
+            android:exported="false" />
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+    </application>
+
+</manifest>

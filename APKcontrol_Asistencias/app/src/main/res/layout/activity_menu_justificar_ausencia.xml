@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:background="#FDFDFD">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#0576F9"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0">
+
+                            <ImageView
+                                android:id="@+id/Frm_Perfil_ImgFoto"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/justificar"
+                            />
+
+                            <TextView
+                                android:id="@+id/txtNombreEmpleado"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Justificar Ausencia"
+                                android:textColor="#fff"
+                                android:textSize="22dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="30dp"
+                        android:hint="Titulo"
+                        app:endIconMode="clear_text"
+                        app:helperText="Required*"
+                        app:helperTextTextColor="#D32222">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/Widget.AppCompat.EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#EFEEEE"
+                            android:inputType="text"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:id="@+id/Frm_JustAuse_txtTitulo"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:hint="Descripción"
+                        app:endIconMode="clear_text"
+                        app:helperText="Required*"
+                        app:helperTextTextColor="#D32222"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/Widget.AppCompat.EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#EFEEEE"
+                            android:gravity="top"
+                            android:inputType="textMultiLine"
+                            android:lines="7"
+                            android:overScrollMode="always"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:scrollHorizontally="false"
+                            android:id="@+id/Frm_JustAuse_txtDescripcion"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/button2"
+                        style="@android:style/Widget.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="130dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/blue_button"
+                        android:onClick="OnClick_BtnEnviar"
+                        android:text="Enviar"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        style="@android:style/Widget.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/blue_button"
+                        android:onClick="OnClick_BtnCancelar"
+                        android:text="Cancelar"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

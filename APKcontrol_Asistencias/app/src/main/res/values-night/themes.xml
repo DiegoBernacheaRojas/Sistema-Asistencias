@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.APKcontrol_Asistencias" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Otros estilos -->
+    </style>
+
+</resources>
